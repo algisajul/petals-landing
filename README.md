@@ -1,1 +1,1 @@
-psycological landing page by Julia Algisa
+psychological landing page by Julia Algisa
