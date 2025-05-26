@@ -1,1 +1,1122 @@
-test
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пелюстки тебе - Емоційна підтримка</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #5e4a6e;
+      --color-primary-hover: #4b3a59;
+      --color-bg: #f8f6f9;
+      --color-border: #d6bce3;
+      --color-text: #2f2f2f;
+      --color-text-light: #4a4a4a;
+      --color-accent: #a5d6c7;
+      --color-bg-alt: #f2eef8;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--color-text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.7;
+      position: relative;
+    }
+    
+    /* Parallax Background */
+    .parallax-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/julia888888_A_soft_abstract_image_of_pastel-colored_flower_peta_2bdededd-9c4d-4d4e-aea3-3b963c0073cb.png-lpuHEXpI4wUqKh9QB7wOEBHxtiya7p.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      z-index: -2;
+    }
+    
+    .parallax-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(
+        135deg,
+        rgba(248, 246, 249, 0.85) 0%,
+        rgba(242, 238, 248, 0.9) 50%,
+        rgba(248, 246, 249, 0.85) 100%
+      );
+      z-index: -1;
+    }
+    
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+      background: transparent;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      width: 100%;
+      border-bottom: 1px solid var(--color-border);
+      background-color: rgba(248, 246, 249, 0.95);
+      backdrop-filter: blur(8px);
+    }
+    
+    header .container {
+      display: flex;
+      height: 4rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .logo-text {
+      font-size: 1.25rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      color: var(--color-text);
+    }
+    
+    nav {
+      display: none;
+    }
+    
+    @media (min-width: 768px) {
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+    }
+    
+    nav a {
+      font-size: 0.875rem;
+      font-weight: 300;
+      color: var(--color-text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    nav a:hover {
+      color: var(--color-primary);
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: var(--color-primary);
+      color: white;
+      border: none;
+      border-radius: 0.25rem;
+      font-size: 0.875rem;
+      font-weight: 400;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
+    
+    .btn:hover {
+      background-color: var(--color-primary-hover);
+    }
+    
+    .btn-large {
+      padding: 0.75rem 2rem;
+      font-size: 1.125rem;
+      border-radius: 9999px;
+      font-weight: 300;
+    }
+    
+    main {
+      flex: 1;
+    }
+    
+    .hero-video {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+    }
+    
+    .hero-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    
+    .hero-video::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 150px;
+      background: linear-gradient(to bottom, transparent, rgba(248, 246, 249, 0.7), rgba(248, 246, 249, 0.95));
+    }
+    
+    .hero-content {
+      width: 100%;
+      padding: 4rem 0;
+      background-color: rgba(248, 246, 249, 0.95);
+      backdrop-filter: blur(10px);
+    }
+    
+    .flex-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .space-y-6 {
+      margin-bottom: 2.5rem;
+    }
+    
+    .space-y-10 {
+      margin-bottom: 2.5rem;
+    }
+    
+    h1 {
+      font-size: 1.875rem;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--color-text);
+      margin-bottom: 1.5rem;
+    }
+    
+    @media (min-width: 640px) {
+      h1 {
+        font-size: 2.25rem;
+      }
+    }
+    
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      h1 {
+        font-size: 3.75rem;
+      }
+    }
+    
+    .max-w-3xl {
+      max-width: 48rem;
+    }
+    
+    .max-w-2xl {
+      max-width: 42rem;
+    }
+    
+    p {
+      font-weight: 300;
+      line-height: 1.7;
+    }
+    
+    .text-lg {
+      font-size: 1.125rem;
+    }
+    
+    @media (min-width: 768px) {
+      .md\:text-xl {
+        font-size: 1.25rem;
+      }
+    }
+    
+    section {
+      width: 100%;
+      padding: 4rem 0;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      margin-bottom: 2rem;
+      border-radius: 1rem;
+    }
+    
+    section.bg-alt {
+      background-color: rgba(242, 238, 248, 0.95);
+    }
+    
+    @media (min-width: 768px) {
+      section {
+        padding: 7rem 0;
+      }
+    }
+    
+    .bg-white {
+      background-color: rgba(255, 255, 255, 0.95);
+    }
+    
+    .bg-alt {
+      background-color: rgba(242, 238, 248, 0.95);
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--color-text);
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+    
+    @media (min-width: 768px) {
+      h2 {
+        font-size: 1.875rem;
+      }
+    }
+    
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--color-text);
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1rem;
+    }
+    
+    .grid {
+      display: grid;
+      gap: 2.5rem;
+    }
+    
+    @media (min-width: 768px) {
+      .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .lg\:grid-cols-4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    .card {
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--color-border);
+      border-radius: 0.5rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s, box-shadow 0.3s;
+      backdrop-filter: blur(10px);
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(94, 74, 110, 0.1);
+    }
+    
+    .card.bg-alt {
+      background-color: rgba(242, 238, 248, 0.9);
+    }
+    
+    .card.highlighted {
+      border: 2px solid var(--color-primary);
+    }
+    
+    .flex-grow {
+      flex-grow: 1;
+    }
+    
+    .mt-auto {
+      margin-top: auto;
+    }
+    
+    .mt-4 {
+      margin-top: 1rem;
+    }
+    
+    .mt-5 {
+      margin-top: 1.25rem;
+    }
+    
+    .mt-6 {
+      margin-top: 1.5rem;
+    }
+    
+    .mt-10 {
+      margin-top: 2.5rem;
+    }
+    
+    .mt-16 {
+      margin-top: 4rem;
+    }
+    
+    .mb-4 {
+      margin-bottom: 1rem;
+    }
+    
+    .mb-6 {
+      margin-bottom: 1.5rem;
+    }
+    
+    .space-y-2 > * + * {
+      margin-top: 0.5rem;
+    }
+    
+    .space-y-4 > * + * {
+      margin-top: 1rem;
+    }
+    
+    .space-y-5 > * + * {
+      margin-top: 1.25rem;
+    }
+    
+    .space-y-6 > * + * {
+      margin-top: 1.5rem;
+    }
+    
+    .space-y-8 > * + * {
+      margin-top: 2rem;
+    }
+    
+    .space-y-10 > * + * {
+      margin-top: 2.5rem;
+    }
+    
+    .space-y-16 > * + * {
+      margin-top: 4rem;
+    }
+    
+    .w-full {
+      width: 100%;
+    }
+    
+    .text-center {
+      text-align: center;
+    }
+    
+    .text-left {
+      text-align: left;
+    }
+    
+    .italic {
+      font-style: italic;
+    }
+    
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .check-icon {
+      color: var(--color-primary);
+      margin-right: 0.75rem;
+      margin-top: 0.25rem;
+      flex-shrink: 0;
+    }
+    
+    .number-circle {
+      height: 3rem;
+      width: 3rem;
+      border-radius: 9999px;
+      background-color: var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+    
+    .number-circle span {
+      color: var(--color-primary);
+      font-size: 1.25rem;
+    }
+    
+    .petal-card {
+      overflow: hidden;
+    }
+    
+    .petal-image {
+      aspect-ratio: 1 / 1;
+      width: 100%;
+      object-fit: cover;
+    }
+    
+    .petal-content {
+      padding: 2rem;
+    }
+    
+    .footer-video {
+      position: relative;
+      width: 100%;
+      height: 20vh;
+      background-color: black;
+      overflow: hidden;
+    }
+    
+    @media (min-width: 768px) {
+      .footer-video {
+        height: 25vh;
+      }
+    }
+    
+    .footer-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    
+    .footer-video::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .footer-content {
+      width: 100%;
+      border-top: 1px solid var(--color-border);
+      background-color: rgba(248, 246, 249, 0.95);
+      padding: 2rem 0;
+      backdrop-filter: blur(10px);
+    }
+    
+    .footer-nav {
+      width: 100%;
+      border-top: 1px solid var(--color-border);
+      background-color: rgba(248, 246, 249, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 1.5rem 0;
+    }
+    
+    @media (min-width: 768px) {
+      .md\:flex-row {
+        flex-direction: row;
+      }
+      
+      .md\:mb-0 {
+        margin-bottom: 0;
+      }
+    }
+    
+    .gap-2 {
+      gap: 0.5rem;
+    }
+    
+    .gap-4 {
+      gap: 1rem;
+    }
+    
+    .gap-6 {
+      gap: 1.5rem;
+    }
+    
+    .gap-8 {
+      gap: 2rem;
+    }
+    
+    .gap-10 {
+      gap: 2.5rem;
+    }
+    
+    .flex-wrap {
+      flex-wrap: wrap;
+    }
+    
+    .justify-between {
+      justify-content: space-between;
+    }
+    
+    .items-start {
+      align-items: flex-start;
+    }
+    
+    .items-center {
+      align-items: center;
+    }
+    
+    .text-sm {
+      font-size: 0.875rem;
+    }
+    
+    .text-xl {
+      font-size: 1.25rem;
+    }
+    
+    .text-primary {
+      color: var(--color-primary);
+    }
+    
+    .text-accent {
+      color: var(--color-accent);
+    }
+    
+    .steps-container {
+      counter-reset: step;
+    }
+    
+    .step-card {
+      position: relative;
+      padding-left: 3rem;
+    }
+    
+    .step-card::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: var(--color-border);
+      color: var(--color-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+    }
+    
+    .testimonial {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 0.5rem;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(10px);
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      margin-top: 1.5rem;
+    }
+    
+    .testimonial-avatar {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 1rem;
+    }
+    
+    .testimonial-info {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .testimonial-name {
+      font-weight: 500;
+    }
+    
+    .testimonial-role {
+      font-size: 0.875rem;
+      color: var(--color-text-light);
+    }
+    
+    .tag {
+      display: inline-block;
+      background-color: rgba(242, 238, 248, 0.9);
+      color: var(--color-primary);
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+    
+    /* Mobile optimization for parallax */
+    @media (max-width: 768px) {
+      .parallax-background {
+        background-attachment: scroll;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Parallax Background -->
+  <div class="parallax-background"></div>
+  <div class="parallax-overlay"></div>
+  
+  <div class="content-wrapper">
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+            <path d="M12 7.5a4.5 4.5 0 1 0 4.5 4.5H12V7.5Z"></path>
+            <path d="M12 7.5A4.5 4.5 0 1 1 7.5 12H12V7.5Z"></path>
+            <path d="M12 7.5A4.5 4.5 0 1 0 16.5 3H12v4.5Z"></path>
+            <path d="M12 7.5A4.5 4.5 0 1 1 7.5 3H12v4.5Z"></path>
+          </svg>
+          <span class="logo-text">Пелюстки тебе</span>
+        </div>
+        <nav>
+          <a href="#about">Про проєкт</a>
+          <a href="#how-it-works">Як це працює</a>
+          <a href="#portfolio">Портфоліо</a>
+          <a href="#join">Приєднатись</a>
+        </nav>
+        <div>
+          <a href="https://linktr.ee/FanaijoyVision" target="_blank" rel="noopener noreferrer" class="btn">Контакт</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section - Calm.com style -->
+      <section class="hero-video">
+        <video autoplay loop muted playsinline>
+          <source src="/images/header-petals.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <!-- Hero Content Section - Below the video -->
+      <section class="hero-content">
+        <div class="container">
+          <div class="flex-center space-y-10">
+            <div class="space-y-6 max-w-3xl">
+              <h1>Коли не можеш знайти слова — дозволь зображенню говорити за тебе</h1>
+              <p class="md:text-xl">7 міні-практик емоційної підтримки: зображення, фраза і дотик до себе</p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAEffJFfgO2ky-z2dhWXNazG28UOiORG2IjMjW1SCPa8corw/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-large">Забрати свої 7 пелюсток</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="bg-white">
+        <div class="container">
+          <div class="flex-center space-y-10">
+            <div class="space-y-8 max-w-3xl">
+              <h2>Пелюстки — мова емоцій через образ, фразу і тишу</h2>
+            </div>
+          </div>
+
+          <div class="grid max-w-3xl mx-auto mt-16">
+            <div class="space-y-6">
+              <h3>Що це таке?</h3>
+              <p>Уявіть, що людина — це квітка. Кожна її емоція — як пелюстка: тендітна, змінна, унікальна. Всі разом вони формують цілісність.</p>
+              <p>"Пелюстки тебе" — це візуально-текстовий метод м'якої саморефлексії. Кожна емоція заслуговує бути почутою, названою і прожитою.</p>
+            </div>
+
+            <div class="space-y-6 mt-10">
+              <h3>Для кого?</h3>
+              <ul class="space-y-4 text-left">
+                <li class="check-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="check-icon">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                  <span>Ти відчуваєш втому і хочеш емоційної паузи</span>
+                </li>
+                <li class="check-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="check-icon">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                  <span>Ти шукаєш інструмент для роботи з клієнтами</span>
+                </li>
+                <li class="check-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="check-icon">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                  <span>Ти не завжди можеш висловити, що саме відчуваєш</span>
+                </li>
+                <li class="check-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="check-icon">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                  <span>Ти потребуєш підтримки — м'якої, без тиску</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="space-y-6 mt-10">
+              <h3>Як працює?</h3>
+              <p>Це запрошення до внутрішнього діалогу, сповільнення та ніжного контакту з собою. Проєкт поєднує AI-генеровані візуали, афірмації та запитання до себе у зручних форматах для особистої чи професійної практики.</p>
+            </div>
+            
+            <div class="flex-center mt-10">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAEffJFfgO2ky-z2dhWXNazG28UOiORG2IjMjW1SCPa8corw/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-large">Почати ніжну підтримку</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What is a Petal Section -->
+      <section class="bg-alt">
+        <div class="container">
+          <div class="flex-center space-y-10">
+            <div class="space-y-6 max-w-3xl">
+              <h2>Що входить у кожну пелюстку?</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-5xl mt-10">
+              <div class="card flex-center space-y-5">
+                <div class="number-circle">
+                  <span>1</span>
+                </div>
+                <h3>Афірмація</h3>
+                <p class="text-center">М'яка підтримка у словах</p>
+              </div>
+
+              <div class="card flex-center space-y-5">
+                <div class="number-circle">
+                  <span>2</span>
+                </div>
+                <h3>Запитання до себе</h3>
+                <p class="text-center">Ключ до внутрішнього діалогу</p>
+              </div>
+
+              <div class="card flex-center space-y-5">
+                <div class="number-circle">
+                  <span>3</span>
+                </div>
+                <h3>Образ</h3>
+                <p class="text-center">AI-візуал, який "резонує" з почуттям</p>
+              </div>
+
+              <div class="card flex-center space-y-5">
+                <div class="number-circle">
+                  <span>4</span>
+                </div>
+                <h3>Аудіо/міні-дія</h3>
+                <p class="text-center">Для глибшого занурення (опційно)</p>
+              </div>
+            </div>
+            
+            <div class="flex-center mt-10">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAEffJFfgO2ky-z2dhWXNazG28UOiORG2IjMjW1SCPa8corw/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-large">Забрати 7 безкоштовних станів</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section id="how-it-works" class="bg-white">
+        <div class="container">
+          <div class="flex-center space-y-16">
+            <h2>Мʼяка філософія підтримки</h2>
+
+            <div class="grid md:grid-cols-3 gap-10 w-full max-w-5xl">
+              <div class="card bg-alt">
+                <h3>Емоційна м'якість</h3>
+                <p>Не змушує, а підтримує. Дозволяє відчути без тиску і очікувань.</p>
+              </div>
+
+              <div class="card bg-alt">
+                <h3>Краса в простоті</h3>
+                <p>Прості форми, глибокий зміст. Мінімалізм, що дозволяє почути себе.</p>
+              </div>
+
+              <div class="card bg-alt">
+                <h3>Дозволяти, а не змушувати</h3>
+                <p>Запрошення, а не інструкція. Повага до внутрішнього ритму кожної людини.</p>
+              </div>
+            </div>
+            
+            <div class="flex-center mt-10">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAEffJFfgO2ky-z2dhWXNazG28UOiORG2IjMjW1SCPa8corw/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-large">Я хочу пелюстки</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- How It Works Process -->
+      <section class="bg-alt">
+        <div class="container">
+          <div class="flex-center space-y-16">
+            <h2>Як це працює?</h2>
+            
+            <div class="grid md:grid-cols-2 gap-10 w-full max-w-4xl steps-container">
+              <div class="card step-card">
+                <h3>Обираєш формат</h3>
+                <p>Безкоштовний набір чи повний комплект — вибір за тобою</p>
+              </div>
+              
+              <div class="card step-card">
+                <h3>Отримуєш набір</h3>
+                <p>Доступ до пелюсток відкривається одразу після реєстрації</p>
+              </div>
+              
+              <div class="card step-card">
+                <h3>Відкриваєш щодня по 1 пелюстці</h3>
+                <p>Кожна пелюстка — це окремий емоційний стан і практика</p>
+              </div>
+              
+              <div class="card step-card">
+                <h3>Помічаєш, як змінюється твій стан</h3>
+                <p>Регулярна практика допомагає краще розуміти свої емоції</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="bg-white">
+        <div class="container">
+          <div class="flex-center space-y-10">
+            <h2>Пелюстки — не просто концепція, а готові емоційні інструменти</h2>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-10 mt-16">
+            <!-- Petal 1: Тягар -->
+            <div class="card petal-card">
+              <span class="tag">Тягар</span>
+              <div class="aspect-square relative">
+                <img src="/images/petal-burden.png" alt="Пелюстка: Тягар" class="petal-image">
+              </div>
+              <div class="petal-content space-y-5">
+                <h3>🌑 Тягар</h3>
+                <p class="italic">«Мені дозволено втомитися»</p>
+                <p>Запитання: Що я тягну на собі, хоча це вже не моє?</p>
+                <p class="mt-4">Коли все лягло на плечі. Коли ззовні ти сильна — а всередині вже давно болить. Ця пелюстка — про визнання втоми, яку зазвичай не помічають. Про дозвіл зупинитись.</p>
+              </div>
+            </div>
+
+            <!-- Petal 2: Спокій -->
+            <div class="card petal-card">
+              <span class="tag">Спокій</span>
+              <div class="aspect-square relative">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/julia888888_A_calm_lake_reflecting_the_sky_and_a_persons_face_600fe79b-550d-4c4e-b5f3-959d8004629e_0-M7nsu5eRNZvGBU0HnHIYaU5vhww4Fp.png" alt="Пелюстка: Спокій" class="petal-image">
+              </div>
+              <div class="petal-content space-y-5">
+                <h3>🌊 Спокій</h3>
+                <p class="italic">«Я можу видихнути»</p>
+                <p>Запитання: Що я намагаюсь тримати під контролем — чи можу я це відпустити?</p>
+                <p class="mt-4">Це не тиша порожнечі — це тиша, де стає чутно себе. Спокій — не втеча, а відновлення. Ця пелюстка запрошує розслабитись без почуття провини.</p>
+              </div>
+            </div>
+
+            <!-- Petal 3: Перевантаження думками -->
+            <div class="card petal-card">
+              <span class="tag">Перевантаження думками</span>
+              <div class="aspect-square relative">
+                <img src="/images/petal-overthinking.png" alt="Пелюстка: Перевантаження думками" class="petal-image">
+              </div>
+              <div class="petal-content space-y-5">
+                <h3>🧠 Перевантаження думками</h3>
+                <p class="italic">«Я можу обрати тишу всередині»</p>
+                <p>Запитання: Яку думку я прокручую знову і знову? Що стоїть за нею?</p>
+                <p class="mt-4">Коли думки не дають спокою. Коли всередині постійний рух, як потік, який не зупинити. Ця пелюстка допоможе зробити паузу, почути не думку, а себе під нею.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- States Section -->
+      <section class="bg-alt">
+        <div class="container">
+          <div class="flex-center space-y-16">
+            <h2>Емоційні стани</h2>
+            <div class="grid md:grid-cols-2 gap-10 w-full max-w-4xl">
+              <div class="card">
+                <span class="tag">Тривожна емоційна самотність</span>
+                <p>Я прокидаюсь з тривогою й лягаю зі втомою. Я "тримаюсь", бо звикла. Я мовчу, бо не знаю, як пояснити. Іноді здається, що я просто тягну — себе, обов'язки, очікування. Однак водночас я дуже хочу, щоб хтось просто запитав: "Як ти насправді?"</p>
+              </div>
+
+              <div class="card">
+                <span class="tag">Емоційне виснаження</span>
+                <p>Я постійно в режимі "функціоную". Здається, я маю бути сильною, зібраною, підтримувати інших. Але всередині — втома, тривога, пригнічення. Я навіть не завжди можу це описати словами. Просто... важко. Постійно.</p>
+              </div>
+
+              <div class="card">
+                <span class="tag">Втрата або глибока туга</span>
+                <p>Мені бракує чогось — або когось. Це не завжди можна назвати словами. Але цей сум — мов важка ковдра, яку не можна скинути. Я хочу з кимось просто посидіти поруч у цій тузі — без порад, без "тримайся".</p>
+              </div>
+
+              <div class="card">
+                <span class="tag">Перевантаження думками</span>
+                <p>Моя голова ніколи не мовчить. Думки скачуть, перебивають одна одну, б'ються. Я навіть не знаю, що з них моє, а що нав'язане. Просто хочу, щоб стало трохи тихіше. Хоча б всередині.</p>
+              </div>
+            </div>
+            
+            <div class="flex-center mt-10">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAEffJFfgO2ky-z2dhWXNazG28UOiORG2IjMjW1SCPa8corw/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-large">Отримати емоційний дотик</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Testimonials -->
+      <section class="bg-white">
+        <div class="container">
+          <div class="flex-center space-y-16">
+            <h2>Відгуки</h2>
+            
+            <div class="grid md:grid-cols-2 gap-10 w-full max-w-4xl">
+              <div class="testimonial">
+                <p>"Це не про вирішення проблем. Це про те, що хтось поруч. Пелюстки стали моїм щоденним ритуалом підтримки."</p>
+                <div class="testimonial-author">
+                  <img src="/placeholder.svg?height=100&width=100" alt="Аватар" class="testimonial-avatar">
+                  <div class="testimonial-info">
+                    <span class="testimonial-name">Катерина</span>
+                    <span class="testimonial-role">дизайнер</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="testimonial">
+                <p>"Використовую з клієнтами, коли слова закінчуються. Образи і запитання відкривають те, що було заховано глибоко."</p>
+                <div class="testimonial-author">
+                  <img src="/placeholder.svg?height=100&width=100" alt="Аватар" class="testimonial-avatar">
+                  <div class="testimonial-info">
+                    <span class="testimonial-name">Анонімно</span>
+                    <span class="testimonial-role">психолог</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Join Section -->
+      <section id="join" class="bg-alt">
+        <div class="container">
+          <div class="flex-center space-y-10">
+            <h2>Обери свій формат емоційної підтримки з "Пелюстками тебе"</h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mt-16">
+            <!-- Free Package -->
+            <div class="card">
+              <div class="space-y-2">
+                <h3>Спробуй безкоштовно</h3>
+                <p class="text-primary">7 днів</p>
+              </div>
+              <p class="flex-grow">Почни без очікувань. PDF з першими 7 пелюстками. Доступ відкривається після реєстрації.</p>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAEffJFfgO2ky-z2dhWXNazG28UOiORG2IjMjW1SCPa8corw/viewform" target="_blank" rel="noopener noreferrer" class="btn w-full mt-auto">Отримати безкоштовно</a>
+            </div>
+
+            <!-- Full Package -->
+            <div class="card highlighted">
+              <div class="space-y-2">
+                <h3>Повний набір</h3>
+                <p class="text-primary">30 днів</p>
+              </div>
+              <p class="flex-grow">Твій інтимний щоденник підтримки на місяць. PNG + тексти + посилання. Доступ відкривається після оплати.</p>
+              <div class="mt-auto">
+                <div class="text-lg mb-4">499 грн</div>
+                <a href="https://drive.google.com/drive/folders/11IbslXU-o8986_fCaSBEg0fz0vGIAb4J?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn w-full">Придбати повний набір</a>
+              </div>
+            </div>
+
+            <!-- Professional Package -->
+            <div class="card">
+              <div class="space-y-2">
+                <h3>Професійний пакет</h3>
+                <p class="text-primary">для практиків</p>
+              </div>
+              <p class="flex-grow">Для психологів та коучів. AI-анімації, адаптація для блогів. Умови співпраці та ціни обговорюються індивідуально.</p>
+              <div class="mt-auto">
+                <div class="text-lg mb-4">від 650 грн</div>
+                <a href="https://drive.google.com/drive/folders/1OkiGjV-X0EnFiRwfTxd6odhKQmSijqLz?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn w-full">Хочу як практик</a>
+              </div>
+            </div>
+
+            <!-- АРТ пелюстка індивідуальна -->
+            <div class="card">
+              <div class="space-y-2">
+                <h3>АРТ пелюстка індивідуальна</h3>
+              </div>
+              <p class="flex-grow">Персоналізована, створена з тебе. Акрилові фарби, вживу в Києві. Це не сеанс психотерапії це вечір з фарбою. Ціна обговорюється індивідуально.</p>
+              <div class="mt-auto">
+                <a href="https://api.whatsapp.com/send/?phone=380979477431&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="btn w-full">Обговорити мій запит</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="bg-white">
+        <div class="container">
+          <div class="flex-center space-y-10">
+            <h2>Відчуй підтримку в один клік</h2>
+            <p class="max-w-2xl">Отримай 7 безкоштовних "пелюсток", які допоможуть тобі дихати глибше, бачити ясніше та відчувати підтримку.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAEffJFfgO2ky-z2dhWXNazG28UOiORG2IjMjW1SCPa8corw/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-large">Забрати свої 7 пелюсток</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer with Flower Display -->
+    <footer>
+      <!-- Full-width flower display -->
+      <div class="footer-video">
+        <video autoplay loop muted playsinline>
+          <source src="/images/footer-petals.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Footer content -->
+      <div class="footer-content">
+        <div class="container">
+          <div class="flex-center md:flex-row justify-between">
+            <div class="flex items-center gap-2 mb-4 md:mb-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                <path d="M12 7.5a4.5 4.5 0 1 0 4.5 4.5H12V7.5Z"></path>
+                <path d="M12 7.5A4.5 4.5 0 1 1 7.5 12H12V7.5Z"></path>
+                <path d="M12 7.5A4.5 4.5 0 1 0 16.5 3H12v4.5Z"></path>
+                <path d="M12 7.5A4.5 4.5 0 1 1 7.5 3H12v4.5Z"></path>
+              </svg>
+              <span class="logo-text">Пелюстки тебе</span>
+            </div>
+            <p class="text-sm">&copy; 2025 Пелюстки тебе. Всі права захищені.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional navigation and social links -->
+      <div class="footer-nav">
+        <div class="container">
+          <div class="flex-center md:flex-row justify-between gap-6">
+            <nav class="flex flex-wrap items-center justify-center gap-6">
+              <a href="#about" class="text-sm">Про проєкт</a>
+              <a href="#how-it-works" class="text-sm">Як це працює</a>
+              <a href="#portfolio" class="text-sm">Портфоліо</a>
+              <a href="#join" class="text-sm">Приєднатись</a>
+            </nav>
+
+            <div>
+              <a href="https://linktr.ee/FanaijoyVision" target="_blank" rel="noopener noreferrer" class="btn">Контакт</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>test
