@@ -72,10 +72,40 @@
       margin: 2rem 0;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
+    .petal-card {
+      margin: 2rem 0;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+    .petal-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .petal-content {
+      padding: 1rem;
+      background: #fff;
+    }
+    .video-section {
+      margin: 2rem 0;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
   </style>
 </head>
 <body>
   <header>
+    <div class="video-section">
+      <video autoplay muted loop playsinline>
+        <source src="images/header-petals.mp4" type="video/mp4">
+      </video>
+    </div>
     <h1>When you can't find the words — let the image speak for you</h1>
     <p>7 mini-practices of emotional support: image, phrase, and gentle contact with yourself</p>
     <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdAEffJFfgO2ky-z2dhWXNazG28UOiORG2IjMjW1SCPa8corw/viewform" target="_blank">Get Your 7 Petals</a>
@@ -89,13 +119,31 @@
     </div>
 
     <div class="section">
-      <h2>Who is it for?</h2>
-      <ul>
-        <li>You feel exhausted and need an emotional pause</li>
-        <li>You seek tools to work with clients</li>
-        <li>You can’t always express how you feel</li>
-        <li>You need support — soft, without pressure</li>
-      </ul>
+      <h2>Petal Examples</h2>
+      <div class="petal-card">
+        <img src="images/petal-burden.png" alt="Petal: Burden">
+        <div class="petal-content">
+          <h3>🌑 Burden</h3>
+          <p><em>“I’m allowed to be tired.”</em></p>
+          <p>Question: What am I still carrying that no longer belongs to me?</p>
+        </div>
+      </div>
+      <div class="petal-card">
+        <img src="images/julia888888_A_calm_lake_reflecting_the_sky_and_a_persons_face_600fe79b-550d-4c4e-b5f3-959d8004629e_0-M7nsu5eRNZvGBU0HnHIYaU5vhww4Fp.png" alt="Petal: Calm">
+        <div class="petal-content">
+          <h3>🌊 Calm</h3>
+          <p><em>“I can exhale.”</em></p>
+          <p>Question: What am I trying to control — and can I let it go?</p>
+        </div>
+      </div>
+      <div class="petal-card">
+        <img src="images/petal-overthinking.png" alt="Petal: Overthinking">
+        <div class="petal-content">
+          <h3>🧠 Overthinking</h3>
+          <p><em>“I can choose inner silence.”</em></p>
+          <p>Question: Which thought keeps repeating — and what is underneath it?</p>
+        </div>
+      </div>
     </div>
 
     <div class="section">
@@ -126,6 +174,11 @@
   </main>
 
   <footer>
+    <div class="video-section">
+      <video autoplay muted loop playsinline>
+        <source src="images/footer-petals.mp4" type="video/mp4">
+      </video>
+    </div>
     <p style="text-align:center; font-size: 0.9rem; color: var(--color-text-light);">
       &copy; 2025 Petals for You · Created by Julia Algisa · <a href="https://linktr.ee/FanaijoyVision" target="_blank">Contact</a>
     </p>
