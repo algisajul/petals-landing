@@ -3,129 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Petals for You - Emotional Support 🌸 🌸 </title>
+  <title>Petals for You – Emotional Support 🌸</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    /* Your existing styles */
+    :root {
+      --color-primary: #5e4a6e;
+      --color-primary-hover: #4b3a59;
+      --color-bg: #f8f6f9;
+      --color-border: #d6bce3;
+      --color-text: #2f2f2f;
+      --color-text-light: #4a4a4a;
+      --color-accent: #a5d6c7;
+      --color-bg-alt: #f2eef8;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--color-text);
+      background: var(--color-bg);
+      min-height: 100vh;
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+    }
+    header, main, footer {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 2rem 0 1rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin: 2rem 0 1rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    .btn {
+      background: var(--color-primary);
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    .section {
+      background-color: white;
+      border-radius: 1rem;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
   </style>
 </head>
 <body>
-  <!-- Parallax Background -->
-  <div class="parallax-background"></div>
-  <div class="parallax-overlay"></div>
-  
-  <div class="content-wrapper">
-    <!-- Header -->
-    <header>
-      <div class="container">
-        <div class="logo">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
-            <path d="M12 7.5a4.5 4.5 0 1 0 4.5 4.5H12V7.5Z"></path>
-            <path d="M12 7.5A4.5 4.5 0 1 1 7.5 12H12V7.5Z"></path>
-            <path d="M12 7.5A4.5 4.5 0 1 0 16.5 3H12v4.5Z"></path>
-            <path d="M12 7.5A4.5 4.5 0 1 1 7.5 3H12v4.5Z"></path>
-          </svg>
-          <span class="logo-text">Petals for You</span>
-        </div>
-        <nav>
-          <a href="#about">About the Project</a>
-          <a href="#how-it-works">How It Works</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#join">Join</a>
-        </nav>
-        <div>
-          <a href="https://linktr.ee/FanaijoyVision" target="_blank" rel="noopener noreferrer" class="btn">Contact</a>
-        </div>
-      </div>
-    </header>
+  <header>
+    <h1>When you can't find the words — let the image speak for you</h1>
+    <p>7 mini-practices of emotional support: image, phrase, and gentle contact with yourself</p>
+    <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdAEffJFfgO2ky-z2dhWXNazG28UOiORG2IjMjW1SCPa8corw/viewform" target="_blank">Get Your 7 Petals</a>
+  </header>
 
-    <main>
-      <!-- Hero Section - Calm.com style -->
-      <section class="hero-video">
-        <video autoplay loop muted playsinline>
-          <source src="images/header-petals.mp4" type="video/mp4">
-        </video>
-      </section>
+  <main>
+    <div class="section">
+      <h2>What are Petals?</h2>
+      <p>Imagine a person as a flower. Each emotion is like a petal: fragile, shifting, unique. Together, they form wholeness.</p>
+      <p><strong>"Petals for You"</strong> is a visual-textual method of gentle self-reflection. Every emotion deserves to be heard, named, and felt.</p>
+    </div>
 
-      <!-- Hero Content Section - Below the video -->
-      <section class="hero-content">
-        <div class="container">
-          <div class="flex-center space-y-10">
-            <div class="space-y-6 max-w-3xl">
-              <h1>When you can't find the words — let the image speak for you</h1>
-              <p class="md:text-xl">7 mini-practices of emotional support: image, phrase, and touch with yourself</p>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAEffJFfgO2ky-z2dhWXNazG28UOiORG2IjMjW1SCPa8corw/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-large">Get Your 7 Petals</a>
-          </div>
-        </div>
-      </section>
+    <div class="section">
+      <h2>Who is it for?</h2>
+      <ul>
+        <li>You feel exhausted and need an emotional pause</li>
+        <li>You seek tools to work with clients</li>
+        <li>You can’t always express how you feel</li>
+        <li>You need support — soft, without pressure</li>
+      </ul>
+    </div>
 
-      <!-- About Section -->
-      <section id="about" class="bg-white">
-        <div class="container">
-          <div class="flex-center space-y-10">
-            <div class="space-y-8 max-w-3xl">
-              <h2>Petals — the language of emotions through image, phrase, and silence</h2>
-            </div>
-          </div>
+    <div class="section">
+      <h2>What’s inside each Petal?</h2>
+      <ul>
+        <li><strong>Affirmation:</strong> gentle support in words</li>
+        <li><strong>Question for yourself:</strong> key to inner dialogue</li>
+        <li><strong>Visual:</strong> AI image that resonates with emotion</li>
+        <li><strong>Audio or micro-practice:</strong> optional deepening tool</li>
+      </ul>
+    </div>
 
-          <div class="grid max-w-3xl mx-auto mt-16">
-            <div class="space-y-6">
-              <h3>What is it?</h3>
-              <p>Imagine a person as a flower. Each emotion is like a petal: fragile, changeable, unique. Together they form a whole.</p>
-              <p>"Petals for You" is a visual-text method of gentle self-reflection. Each emotion deserves to be heard, named, and lived.</p>
-            </div>
+    <div class="section">
+      <h2>How it works</h2>
+      <ol>
+        <li>You choose the format: free or full</li>
+        <li>You get access instantly after registration</li>
+        <li>You open one Petal a day — each with a state and a practice</li>
+        <li>You notice how your inner state begins to shift</li>
+      </ol>
+    </div>
 
-            <div class="space-y-6 mt-10">
-              <h3>Who is it for?</h3>
-              <ul class="space-y-4 text-left">
-                <li class="check-item">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="check-icon">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="m9 12 2 2 4-4"></path>
-                  </svg>
-                  <span>You feel tired and need an emotional break</span>
-                </li>
-                <li class="check-item">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="check-icon">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="m9 12 2 2 4-4"></path>
-                  </svg>
-                  <span>You are looking for a tool to work with clients</span>
-                </li>
-                <li class="check-item">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="check-icon">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="m9 12 2 2 4-4"></path>
-                  </svg>
-                  <span>You can't always express what you feel</span>
-                </li>
-                <li class="check-item">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="check-icon">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="m9 12 2 2 4-4"></path>
-                  </svg>
-                  <span>You need support — soft, without pressure</span>
-                </li>
-              </ul>
-            </div>
+    <div class="section">
+      <h2>Want to try?</h2>
+      <p>Start with 7 free Petals to breathe deeper, see clearer, and feel supported.</p>
+      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdAEffJFfgO2ky-z2dhWXNazG28UOiORG2IjMjW1SCPa8corw/viewform" target="_blank">Claim Free Petals</a>
+    </div>
+  </main>
 
-            <div class="space-y-6 mt-10">
-              <h3>How does it work?</h3>
-              <p>This is an invitation to inner dialogue, slowing down, and gentle contact with yourself. The project combines AI-generated visuals, affirmations, and questions for self-reflection in convenient formats for personal or professional practice.</p>
-            </div>
-            
-            <div class="flex-center mt-10">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAEffJFfgO2ky-z2dhWXNazG28UOiORG2IjMjW1SCPa8corw/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-large">Start Gentle Support</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <!-- More Sections... -->
-    </main>
-  </div>
+  <footer>
+    <p style="text-align:center; font-size: 0.9rem; color: var(--color-text-light);">
+      &copy; 2025 Petals for You · Created by Julia Algisa · <a href="https://linktr.ee/FanaijoyVision" target="_blank">Contact</a>
+    </p>
+  </footer>
 </body>
 </html>
