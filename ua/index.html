@@ -31,6 +31,11 @@
       color: #4b5563; /* gray-600 */
       margin-bottom: 1rem;
     }
+
+    /* Паралакс-ефект для фону героя: фон залишається фіксованим під час прокручування */
+    .parallax {
+      background-attachment: fixed;
+    }
   </style>
 </head>
 <body>
@@ -39,26 +44,28 @@
     <header class="bg-white/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
       <div class="container mx-auto px-6 py-4 flex items-center justify-between">
         <div class="flex items-center space-x-3">
-          <img src="../en/da828726b35ec28aeb93c2a0fc8a93a6.png" alt="Логотип Пелюстки" class="w-10 h-10 object-contain">
+          <img src="../en/da828726b35ec28aeb93c2a0fc8a93a6.png" alt="Логотип Пелюстки" class="w-8 h-8 object-contain">
           <h1 class="text-2xl font-bold text-gray-800" style="font-family: Pacifico, serif;">Пелюстки</h1>
         </div>
-        <nav class="hidden md:flex items-center space-x-8">
+        <nav class="hidden md:flex items-center space-x-6">
           <a href="#about" class="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer">Про мене</a>
           <a href="#session" class="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer">Сесія</a>
           <a href="#audience" class="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer">Для кого</a>
           <a href="#formats" class="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer">Формати</a>
           <a href="#states" class="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer">Збірка</a>
+          <a href="#petals" class="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer">Пелюстки</a>
           <a href="#signup" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all whitespace-nowrap cursor-pointer">Записатися</a>
         </nav>
       </div>
     </header>
 
     <!-- Головний герой-блок з фоном та закликом -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Зменшили висоту героя та додали паралакс-ефект -->
+    <section class="relative py-40 flex items-center justify-center overflow-hidden">
       <!-- Фонове зображення — та сама абстрактна квітка, що й на англійській версії -->
-      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://readdy.ai/api/search-image?query=Beautiful%20abstract%20watercolor%20painting%20of%20delicate%20flower%20petals%20in%20soft%20pink%20purple%20and%20blue%20tones%20floating%20gracefully%20with%20gentle%20light%20and%20ethereal%20atmosphere%2C%20dreamy%20artistic%20background%20perfect%20for%20emotional%20healing%20and%20therapy%2C%20soft%20pastel%20colors%20blending%20harmoniously%2C%20peaceful%20and%20calming%20visual%20representation%20of%20emotions%20as%20flower%20petals&width=1920&height=1080&seq=hero-bg&orientation=landscape');"></div>
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat parallax" style="background-image: url('https://readdy.ai/api/search-image?query=Beautiful%20abstract%20watercolor%20painting%20of%20delicate%20flower%20petals%20in%20soft%20pink%20purple%20and%20blue%20tones%20floating%20gracefully%20with%20gentle%20light%20and%20ethereal%20atmosphere%2C%20dreamy%20artistic%20background%20perfect%20for%20emotional%20healing%20and%20therapy%2C%20soft%20pastel%20colors%20blending%20harmoniously%2C%20peaceful%20and%20calming%20visual%20representation%20of%20emotions%20as%20flower%20petals&width=1920&height=1080&seq=hero-bg&orientation=landscape');"></div>
       <!-- Напівпрозорий градієнт для кращої читабельності тексту -->
-      <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-transparent"></div>
       <div class="relative z-10 container mx-auto px-6">
         <div class="max-w-2xl">
           <h2 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight">
