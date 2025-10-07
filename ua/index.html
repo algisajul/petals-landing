@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пелюстки — арт‑терапія для емоційного зцілення</title>
+  <meta name="description" content="Лагідна арт‑терапія для емоційного зцілення. Дослідіть свої емоції через колір і творчість, знайдіть ясність та підтримку, не промовляючи жодного слова.">
+  <!-- Підключення іконки сайту -->
+  <link rel="icon" type="image/png" href="../en/da828726b35ec28aeb93c2a0fc8a93a6.png">
+  <!-- Підключення шрифтів -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Використовуємо ті самі шрифти, що й англійська версія -->
+  <link href="../en/css2" rel="stylesheet">
+  <!-- Піктограми Remix Icon -->
+  <link href="../en/remixicon.css" rel="stylesheet">
+  <!-- Основні стилі Tailwind (скомпільовані для англійської версії) -->
+  <link rel="stylesheet" crossorigin href="../en/index-BxnAwLSX.css">
+  <!-- Можна додати власні невеликі стилі для корекції, якщо потрібно -->
+  <style>
+    /* Власні стилі для україномовної версії. Tailwind CSS не компілює директиву @apply у готовому HTML, тому задаємо властивості вручну. */
+    .section-heading {
+      font-size: 2.25rem; /* приблизно відповідає класу text-4xl */
+      line-height: 1.2;
+      font-weight: 700; /* font-bold */
+      color: #1f2937; /* gray-800 */
+      margin-bottom: 1.5rem; /* mb-6 */
+    }
+    .section-subheading {
+      font-size: 1.25rem; /* текстова шкала */
+      color: #4b5563; /* gray-600 */
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <!-- Шапка сайту з логотипом та навігацією -->
+    <header class="bg-white/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
+      <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <img src="../en/da828726b35ec28aeb93c2a0fc8a93a6.png" alt="Логотип Пелюстки" class="w-10 h-10 object-contain">
+          <h1 class="text-2xl font-bold text-gray-800" style="font-family: Pacifico, serif;">Пелюстки</h1>
+        </div>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="#about" class="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer">Про мене</a>
+          <a href="#session" class="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer">Сесія</a>
+          <a href="#audience" class="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer">Для кого</a>
+          <a href="#formats" class="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer">Формати</a>
+          <a href="#states" class="text-gray-700 hover:text-purple-600 transition-colors cursor-pointer">Збірка</a>
+          <a href="#signup" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all whitespace-nowrap cursor-pointer">Записатися</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Головний герой-блок з фоном та закликом -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <!-- Фонове зображення — та сама абстрактна квітка, що й на англійській версії -->
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://readdy.ai/api/search-image?query=Beautiful%20abstract%20watercolor%20painting%20of%20delicate%20flower%20petals%20in%20soft%20pink%20purple%20and%20blue%20tones%20floating%20gracefully%20with%20gentle%20light%20and%20ethereal%20atmosphere%2C%20dreamy%20artistic%20background%20perfect%20for%20emotional%20healing%20and%20therapy%2C%20soft%20pastel%20colors%20blending%20harmoniously%2C%20peaceful%20and%20calming%20visual%20representation%20of%20emotions%20as%20flower%20petals&width=1920&height=1080&seq=hero-bg&orientation=landscape');"></div>
+      <!-- Напівпрозорий градієнт для кращої читабельності тексту -->
+      <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent"></div>
+      <div class="relative z-10 container mx-auto px-6">
+        <div class="max-w-2xl">
+          <h2 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight">
+            Коли&nbsp;емоції<span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600"> занадто сильні</span> для слів
+          </h2>
+          <p class="text-xl text-gray-600 mb-8 leading-relaxed">Дозвольте кольору говорити за вас&nbsp;— створіть простір для ваших відчуттів і знайдіть шлях до спокою.</p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#signup" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all whitespace-nowrap cursor-pointer">Записатися</a>
+            <a href="#states" class="border-2 border-purple-300 text-purple-700 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-50 transition-all whitespace-nowrap cursor-pointer">Завантажити збірку</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок "Про мене" -->
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="section-heading">Про мене</h2>
+          <p class="text-gray-600 mb-6">Колір говорить більше, ніж слова. 10 років я працюю з палітрами й формами, і навчаюся чути те, що ще не артикульовано. Мій шлях до арт‑терапії почався з власного досвіду: через колір я вперше відчула, як емоції можуть трансформуватися без слів.</p>
+          <p class="text-gray-600 mb-6">Як арт‑терапевтка я супроводжую тих, хто живе у стресі, тривозі чи внутрішньому хаосі — і разом через фарби ми повертаємо ясність, тишу та контакт із собою.</p>
+          <p class="text-gray-600">У моїй студії на Подолі створено простір, де вам потрібно прийти лише з собою. Наприкінці сесії ви отримаєте не просто картину — а відображення власної трансформації, яку захочеться мати поруч.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок "Що відбувається на сесії" -->
+    <section id="session" class="py-20 bg-gradient-to-br from-pink-50 to-purple-50">
+      <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="section-heading">Що відбувається на сесії</h2>
+          <p class="text-gray-600 mb-4">Ви приходите такою, як є — з тривогою, втомою чи внутрішньою плутаниною. Ми починаємо з того, що найбільше потребує уваги — іноді це біль, іноді — тиша, що проситься на голос.</p>
+          <p class="text-gray-600 mb-4">Протягом 1,5–2 годин ви працюєте з кольорами у власному ритмі. Тут не важливо «вміти малювати». Важливо — дозволити кольору висловити те, що всередині.</p>
+          <p class="text-gray-600 mb-4">Я створюю безпечний простір, підтримую і м’яко супроводжую ваш процес. Сесія — це дослідження. Вона унікальна кожного разу. Ви йдете додому не лише з картиною, а з пережитою трансформацією.</p>
+          <p class="text-gray-600">Усе включено: матеріали, затишок, чай і моя присутність.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок "Для кого ця терапія" -->
+    <section id="audience" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="section-heading">Для кого ця терапія</h2>
+          <p class="text-gray-600 mb-4">Це для вас, якщо ви:</p>
+          <ul class="list-disc pl-6 space-y-2 text-gray-600 mb-6">
+            <li>Відчуваєте тривогу, а слова не допомагають</li>
+            <li>Живете у стресі, який не зникає</li>
+            <li>Проходите складний період і хочете безпечний простір</li>
+            <li>Втомилися тримати емоції в собі</li>
+            <li>Шукаєте підтримку без потреби говорити</li>
+            <li>Хочете подбати про себе без насилля</li>
+          </ul>
+          <h3 class="text-2xl font-semibold text-gray-800 mb-2">Особливо підходить:</h3>
+          <ul class="list-disc pl-6 space-y-2 text-gray-600 mb-6">
+            <li>Жінкам у період змін, перевантаження</li>
+            <li>Людям з досвідом емоційного вигорання</li>
+            <li>Тим, хто хоче дослідити себе через творчість</li>
+          </ul>
+          <p class="text-gray-700"><strong>Важливо:</strong> не потрібно вміти малювати. Це не про техніку — це про правду з собою.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок "Формати, вартість, графік, локація" -->
+    <section id="formats" class="py-20 bg-gradient-to-br from-pink-50 to-purple-50">
+      <div class="container mx-auto px-6">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="section-heading mb-12">Формати, вартість, графік, локація</h2>
+          <!-- Сітка форматів сесій -->
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <!-- Індивідуальна сесія -->
+            <div class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl p-8 border border-pink-200 shadow-md">
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">Індивідуальна сесія</h3>
+              <p class="text-sm text-gray-600 mb-2">1,5–2 год</p>
+              <p class="text-gray-600 mb-4">Глибока робота з емоціями через фарби</p>
+              <p class="text-lg font-semibold text-purple-700">700 грн</p>
+            </div>
+            <!-- Парна сесія -->
+            <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border border-purple-200 shadow-md">
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">Парна сесія</h3>
+              <p class="text-sm text-gray-600 mb-2">2 год</p>
+              <p class="text-gray-600 mb-4">Для тих, хто хоче зрозуміти одне одного через творчість</p>
+              <p class="text-lg font-semibold text-purple-700">1200 грн</p>
+            </div>
+            <!-- Групова сесія -->
+            <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200 shadow-md">
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">Групова сесія</h3>
+              <p class="text-sm text-gray-600 mb-2">2–2,5 год</p>
+              <p class="text-gray-600 mb-4">Терапевтичний простір до 6 учасниць</p>
+              <p class="text-lg font-semibold text-purple-700">600 грн/особа</p>
+            </div>
+            <!-- Пакет сесій -->
+            <div class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl p-8 border border-pink-200 shadow-md">
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">Пакет із 4 індивідуальних сесій</h3>
+              <p class="text-sm text-gray-600 mb-4">Економія 400 грн</p>
+              <p class="text-lg font-semibold text-purple-700">2400 грн</p>
+            </div>
+            <!-- Корпоративні сесії -->
+            <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border border-purple-200 shadow-md">
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">Корпоративні сесії</h3>
+              <p class="text-gray-600 mb-4">За домовленістю</p>
+              <p class="text-lg font-semibold text-purple-700">—</p>
+            </div>
+          </div>
+          <!-- Додаткова інформація -->
+          <div class="space-y-2 text-gray-700">
+            <p><strong>Графік:</strong> будні та субота (за домовленістю). Неділя — вихідний.</p>
+            <p><strong>Локація:</strong> Поділ, Київ (точну адресу надсилаю після запису)</p>
+            <p><strong>Усе включено:</strong> матеріали, полотно, чай/кава, супровід, затишний простір</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок "Як записатися" -->
+    <section id="signup" class="py-20 bg-gradient-to-r from-pink-500 to-purple-600 text-center">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-white mb-6">Як записатися</h2>
+        <p class="text-xl text-pink-100 mb-4 max-w-2xl mx-auto">Напишіть у зручний спосіб — я на зв’язку та допоможу підібрати час. Відповім протягом дня.</p>
+        <p class="text-lg text-white mb-8">
+          Telegram: <a href="https://t.me/username" class="underline text-white hover:text-pink-200" target="_blank">@username</a> 
+          або <a href="tel:+380634311663" class="underline text-white hover:text-pink-200">+380 63 431 16 63</a>
+        </p>
+        <a href="#formats" class="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all whitespace-nowrap cursor-pointer">Дізнатись про формати</a>
+      </div>
+    </section>
+
+    <!-- Блок "Збірка станів" -->
+    <section id="states" class="py-20 bg-white">
+      <div class="container mx-auto px-6 text-center max-w-4xl">
+        <h2 class="section-heading mb-4">Збірка станів (екс‑Пелюстки)</h2>
+        <p class="text-lg text-gray-600 mb-4"><strong>Тобі не треба говорити все словами.</strong> Ми створили <strong>збірку із 7 станів</strong>, що допоможуть прожити тривогу, втому чи розгубленість — через афірмації, історії, запитання та м’яку дію.</p>
+        <p class="text-lg text-gray-600 mb-8"><strong>Завантаж безкоштовно</strong> та почни з малого.</p>
+        <a href="#signup" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all whitespace-nowrap cursor-pointer">Завантажити збірку</a>
+      </div>
+    </section>
+
+    <!-- Блок "Пелюстки — готові емоційні інструменти" з картками -->
+    <section id="petals" class="py-20 bg-gradient-to-br from-pink-50 to-purple-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="section-heading">Пелюстки — не просто концепція, а готові емоційні інструменти</h2>
+        </div>
+        <!-- Сітка карток з емоційними станами -->
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <!-- Картка «Тягар» -->
+          <div class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl p-8 border border-pink-200 shadow-md flex flex-col">
+            <img src="https://raw.githubusercontent.com/algisajul/petals-landing/main/images/petal-burden.png" alt="Тягар" class="w-full h-48 object-cover rounded-xl mb-6">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Тягар</h3>
+            <p class="italic text-gray-600 mb-2">«Мені дозволено втомитися»</p>
+            <p class="text-gray-600 mb-2"><span class="font-semibold">Запитання:</span> Що я тягну на собі, хоча це вже не моє?</p>
+            <p class="text-gray-600">Коли все лягло на плечі. Коли ззовні ви сильні — а всередині вже давно болить. Ця пелюстка — про визнання втоми, яку зазвичай не помічають. Про дозвіл зупинитись.</p>
+          </div>
+          <!-- Картка «Спокій» -->
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200 shadow-md flex flex-col">
+            <img src="https://raw.githubusercontent.com/algisajul/petals-landing/main/images/образ.png" alt="Спокій" class="w-full h-48 object-cover rounded-xl mb-6">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Спокій</h3>
+            <p class="italic text-gray-600 mb-2">«Я можу видихнути»</p>
+            <p class="text-gray-600 mb-2"><span class="font-semibold">Запитання:</span> Що я намагаюся тримати під контролем — чи можу я це відпустити?</p>
+            <p class="text-gray-600">Це не тиша порожнечі — це тиша, де стає чутно себе. Спокій — не втеча, а відновлення. Ця пелюстка запрошує розслабитися без почуття провини.</p>
+          </div>
+          <!-- Картка «Перевантаження думками» -->
+          <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border border-purple-200 shadow-md flex flex-col">
+            <img src="https://raw.githubusercontent.com/algisajul/petals-landing/main/images/petal-overthinking.png" alt="Перевантаження думками" class="w-full h-48 object-cover rounded-xl mb-6">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Перевантаження думками</h3>
+            <p class="italic text-gray-600 mb-2">«Я можу обрати тишу всередині»</p>
+            <p class="text-gray-600 mb-2"><span class="font-semibold">Запитання:</span> Яку думку я прокручую знову і знову? Що стоїть за нею?</p>
+            <p class="text-gray-600">Коли думки не дають спокою. Коли всередині постійний рух, як потік, який не зупинити. Ця пелюстка допоможе зробити паузу, почути не думку, а себе під нею.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Підвал -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <div class="flex items-center space-x-3 mb-4">
+              <img src="../en/da828726b35ec28aeb93c2a0fc8a93a6.png" alt="Логотип Пелюстки" class="w-10 h-10 object-contain">
+              <h3 class="text-xl font-bold" style="font-family: Pacifico, serif;">Пелюстки</h3>
+            </div>
+            <p class="text-gray-400">Лагідна арт‑терапія для емоційного зцілення і самопізнання.</p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Розділи</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="#about" class="hover:text-white transition-colors cursor-pointer">Про мене</a></li>
+              <li><a href="#session" class="hover:text-white transition-colors cursor-pointer">Сесія</a></li>
+              <li><a href="#audience" class="hover:text-white transition-colors cursor-pointer">Для кого</a></li>
+              <li><a href="#formats" class="hover:text-white transition-colors cursor-pointer">Формати</a></li>
+              <li><a href="#states" class="hover:text-white transition-colors cursor-pointer">Збірка станів</a></li>
+              <li><a href="#petals" class="hover:text-white transition-colors cursor-pointer">Пелюстки</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Контакти</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="https://t.me/username" class="hover:text-white transition-colors cursor-pointer" target="_blank">Telegram: @username</a></li>
+              <li><a href="tel:+380634311663" class="hover:text-white transition-colors cursor-pointer">+380 63 431 16 63</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <p>© 2025 Пелюстки. Усі права захищено. | <a href="https://readdy.ai/?origin=logo" class="hover:text-white transition-colors cursor-pointer">Website Builder</a></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- Підключення віджета чату: беремо скрипти з англійської версії, щоб не дублювати файли -->
+  <script src="../en/widget" mode="hybrid" voice-show-transcript="true" theme="light" size="compact" accent-color="#14B8A6" button-base-color="#000000" button-accent-color="#FFFFFF" defer></script>
+  <script src="../en/widget.umd.js"></script>
+</body>
+</html>
