@@ -63,10 +63,15 @@
     <!-- Зменшили висоту героя та додали паралакс-ефект -->
     <section class="relative py-40 flex items-center justify-center overflow-hidden">
       <!-- Фонове зображення — та сама абстрактна квітка, що й на англійській версії -->
-      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat parallax" style="background-image: url('https://readdy.ai/api/search-image?query=Beautiful%20abstract%20watercolor%20painting%20of%20delicate%20flower%20petals%20in%20soft%20pink%20purple%20and%20blue%20tones%20floating%20gracefully%20with%20gentle%20light%20and%20ethereal%20atmosphere%2C%20dreamy%20artistic%20background%20perfect%20for%20emotional%20healing%20and%20therapy%2C%20soft%20pastel%20colors%20blending%20harmoniously%2C%20peaceful%20and%20calming%20visual%20representation%20of%20emotions%20as%20flower%20petals&width=1920&height=1080&seq=hero-bg&orientation=landscape');"></div>
-      <!-- Напівпрозорий градієнт для кращої читабельності тексту -->
+      <div hidden class="absolute inset-0 bg-cover bg-center bg-no-repeat parallax" style="background-image: url('https://readdy.ai/api/search-image?query=Beautiful%20abstract%20watercolor%20painting%20of%20delicate%20flower%20petals%20in%20soft%20pink%20purple%20and%20blue%20tones%20floating%20gracefully%20with%20gentle%20light%20and%20ethereal%20atmosphere%2C%20dreamy%20artistic%20background%20perfect%20for%20emotional%20healing%20and%20therapy%2C%20soft%20pastel%20colors%20blending%20harmoniously%2C%20peaceful%20and%20calming%20visual%20representation%20of%20emotions%20as%20flower%20petals&width=1920&height=1080&se
+        q=hero-bg&orientation=landscape');"></div>
+  
+              <video autoplay loop muted playsinline poster="hero-bg.png" class="absolute inset-0 w-full h-full object-cover">
+          <source src="header-video.mp4" type="video/mp4">
+        </video>
+<!-- Напівпрозорий градієнт для кращої читабельності тексту -->
       <div class="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-transparent"></div>
-      <div class="relative z-10 container mx-auto px-6">
+          <div class="relative z-10 container mx-auto px-6 pt-80pt-80pt-80">
         <div class="max-w-2xl">
           <h2 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight">
             Коли&nbsp;емоції<span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600"> занадто сильні</span> для слів
